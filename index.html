@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration Form</h1>
+        <p>Please fill out the form below to access your ticket</p>
+
+        <form id="registrationForm">
+            <label for="firstName"><i class="fa-solid fa-user"></i> First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName"><i class="fa-solid fa-user"></i> Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="phone"><i class="fa-solid fa-phone-volume"></i> Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email"><i class="fa-regular fa-envelope"></i> Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age"><i class="fa-solid fa-calendar"></i> Age</label>
+            <input type="number" id="day" placeholder="Day" min="1" max="31">
+            <input type="number" id="month" placeholder="Month" min="1" max="12">
+            <input type="number" id="year" placeholder="Year">
+
+            <label for="gender">Select Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Hidden Ticket Section -->
+    <div id="ticketContainer" style="display:none;">
+        <h2>Your Event Ticket</h2>
+        <p><strong>Name:</strong> <span id="ticketName"></span></p>
+        <p><strong>Phone:</strong> <span id="ticketPhone"></span></p>
+        <p><strong>Email:</strong> <span id="ticketEmail"></span></p>
+        <p><strong>Gender:</strong> <span id="ticketGender"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="ticketDOB"></span></p>
+        <p><strong>Ticket Type:</strong> <span id="ticketType"></span></p>
+        <button onclick="window.print()">Download Ticket</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
